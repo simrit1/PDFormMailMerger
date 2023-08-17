@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://ns.adobe.com/acrobat/workflow/2012" title="PDF Form Mail Merger (Copy)" description="" majorVersion="1" minorVersion="0">
+	<Group label="Untitled">
+		<Command name="JavaScript" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="ScriptCode" type="text" value="var DatafileName = &quot;/C/Users/tayff/OneDrive/Desktop/WERCohortPaymentCalculator - Copy.txt&quot;&#xD;&#xA;&#xD;&#xA;var outputDir = &quot;/C/Users/tayff/Downloads/PaymentRequisition Form(WER)/&quot;&#xD;&#xA;&#xD;&#xA;var cnt = 0;&#xD;&#xA;var num = 0;&#xD;&#xA;&#xD;&#xA;while (cnt == 0) {&#xD;&#xA;cnt = this.importTextData(DatafileName, num);&#xD;&#xA;&#xD;&#xA;if (cnt == -1)&#xD;&#xA;app.alert(&quot;Err: Cannot Open File&quot;);&#xD;&#xA;&#xD;&#xA;else if (cnt == -2)&#xD;&#xA;app.alert(&quot;Err: Cannot Load Data&quot;);&#xD;&#xA;&#xD;&#xA;else if (cnt == 1)&#xD;&#xA;app.alert(&quot;File Select cancelled by User&quot;);&#xD;&#xA;&#xD;&#xA;else if (cnt == 2)&#xD;&#xA;app.alert(&quot;Row Select cancelled by User&quot;);&#xD;&#xA;&#xD;&#xA;else if (cnt == 3)&#xD;&#xA;app.alert(&quot;Data Missing&quot;);&#xD;&#xA;&#xD;&#xA;else if (cnt == 0) {&#xD;&#xA;this.saveAs(outputDir + this.getField(&quot;Payee Name&quot;).value + &quot;.pdf&quot;);&#xD;&#xA;num++;&#xD;&#xA;}&#xD;&#xA;}"/>
+				<Item name="ScriptName" type="text" value=""/>
+			</Items>
+		</Command>
+	</Group>
+</Workflow>
